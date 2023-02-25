@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a
+        {
+            text-decoration: none;
+        }
+        ul
+        {
+            list-style: none;
+        }
+        .nav-area
+        {
+            height: 50px;
+            width: 963px;
+            margin: 0 auto;
+            background: deepskyblue;
+        } 
+        .nav-area ul li
+        {
+            float: left;
+            position: relative;
+        }
+        .nav-area ul li a 
+        {
+            padding: 16px 65px;
+            display: block;
+            transition: .7s;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+        .nav-area > ul > li > a 
+        {
+            border-right: 1px solid white;
+        }
+        .nav-area > ul > li li:last-child > a
+        {
+            border-right: none;
+        }
+        .nav-area ul li:hover > a
+        {
+            background: black;
+        }
+        .nav-area ul li a:after 
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 0;
+            background: deepskyblue;
+            transition: .7s;
+        }
+        .nav-area ul li a:before 
+        {
+            content: '';
+            position: absolute;
+            right: 0;
+           top: 0;
+            height: 4px;
+            width: 0;
+            background: deepskyblue;
+            transition: .7s;
+        }
+        .nav-area ul li a:hover:before, 
+        .nav-area ul li a:hover:after 
+        {
+            width: 100px;
+        }
+        .nav-area ul li ul
+        {
+            position: absolute;
+            background: #333;
+            width: 208px;
+            transition: .7s;
+            opacity: 0;
+            visibility: hidden;
+            margin-top: -25px;
+        }
+        .nav-area ul li:hover > ul
+        {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0;
+        }
+        .nav-area ul li ul li{
+            width: 100%;
+        }
+        .nav-area ul li ul li a 
+        {
+            font-size: 14px;
+            text-transform:capitalize;
+            padding: 15px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-area">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a>
+                    
+                </li>
+                <li><a href="#">M'C Donalde Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+</body>
+</html>
